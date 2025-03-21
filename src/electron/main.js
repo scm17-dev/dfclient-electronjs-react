@@ -5,15 +5,15 @@ const createWindow = () => {
   const primaryDisplay = screen.getPrimaryDisplay();
   const { width, height } = primaryDisplay.workAreaSize;
 
-  //Edit ini
-  // const winHeight = height - 46;
-  const winHeight = 912;
-  const posX = width - 400;
+  //ukuran window di TBG2 wsl windows 11 dengan scale 125%
+  const winHeight = height - 100;
+  const winWidth = 430;
+  const posX = width - winWidth - 10;
 
   const win = new BrowserWindow({
-    minHeight: 700,
-    minWidth: 400,
-    width: 400,
+    minHeight: winHeight - 40,
+    minWidth: winWidth,
+    width: winWidth,
     height: winHeight,
     x: posX,
     y: 0,
