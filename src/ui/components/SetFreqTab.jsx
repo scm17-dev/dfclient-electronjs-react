@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { setAntena, setFreqApi } from "../../utils/apiHandler";
 
-function SetFreqTab() {
-  const [freq, setFreq] = useState("");
+function SetFreqTab(props) {
+  //initFreq coba
+  const [freq, setFreq] = useState(props.initFreq);
   const [gain, setGain] = useState("0");
   const [errMsg, setErrMsg] = useState("");
+
+  //ganti bos
+  console.log("init freq: " +props.initFreq);
 
   function handleApply() {
     if (!freq) {

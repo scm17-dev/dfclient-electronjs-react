@@ -7,10 +7,13 @@ import OptionTab from "./OptionTab";
 
 function ControlPanel() {
   const [activeTab, setActiveTab] = useState("SetFreq");
+
+
+
   return (
     <div style={styles.container}>
       <div style={styles.content}>
-        {activeTab === "SetFreq" && <SetFreqTab />}
+        {activeTab === "SetFreq" && <SetFreqTab initFreq="101" />}
         {activeTab === "Compass" && <CompassTab />}
         {activeTab === "Location" && <LocationTab />}
         {activeTab === "Options" && <OptionTab />}
